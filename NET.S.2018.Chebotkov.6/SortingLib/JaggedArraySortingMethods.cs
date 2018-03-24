@@ -16,7 +16,7 @@
         /// <param name="jaggedArray">Jagged array</param>
         public static void Sort(int [][] jaggedArray)
         {
-            int [] resultsOfMethod = new int[jaggedArray.Length];
+            int ? [] resultsOfMethod = new int ? [jaggedArray.Length];
             for (int i = 0; i < jaggedArray.Length; i++)
             {
                 resultsOfMethod[i] = ChosenAlgorithm.Algorithm(jaggedArray[i]);

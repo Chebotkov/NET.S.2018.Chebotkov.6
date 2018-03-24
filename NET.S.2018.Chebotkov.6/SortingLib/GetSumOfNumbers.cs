@@ -10,8 +10,13 @@
         /// </summary>
         /// <param name="array">Array.</param>
         /// <returns>Integer number.</returns>
-        public int Algorithm(int[] array)
+        public int ? Algorithm(int[] array)
         {
+            if (array is null)
+            {
+                return null;
+            }
+
             int sum = array[0];
             for (int i = 1; i < array.Length; i++)
             {

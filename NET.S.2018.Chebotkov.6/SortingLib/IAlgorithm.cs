@@ -10,6 +10,6 @@
         /// </summary>
         /// <param name="array">Array</param>
         /// <returns>Integer Number</returns>
-        int Algorithm(int[] array);
+        int ? Algorithm(int[] array);
     }
 }

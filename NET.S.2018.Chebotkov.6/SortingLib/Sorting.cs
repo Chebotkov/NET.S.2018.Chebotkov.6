@@ -16,7 +16,7 @@ namespace SortingLib
         /// This method sorts array with "Bubble Sorting".
         /// </summary>
         /// <param name="array">Array.</param>
-        public static void BubbleSorting(int [] array, int[][] jaggedArray)
+        public static void BubbleSorting(int ? [] array, int[][] jaggedArray)
         {
             bool isSorted = false;
             while (!isSorted)
@@ -24,6 +24,20 @@ namespace SortingLib
                 isSorted = true; 
                 for (int i = array.Length-1; i >0; i--)
                 {
+                    if (!array[i - 1].HasValue)
+                    {
+                        if (!array[i].HasValue)
+                        {                        
+                            continue;
+                        }
+                        else
+                        {
+                            Swap(ref array[i], ref array[i - 1]);
+                            Swap(ref jaggedArray[i], ref jaggedArray[i - 1]);
+                            isSorted = false;
+                        }
+                    }
+                    
                     if (array[i] < array[i-1])
                     {
                         Swap(ref array[i], ref array[i - 1]);
@@ -41,9 +55,9 @@ namespace SortingLib
         /// </summary>
         /// <param name="index1">First index.</param>
         /// <param name="index2">Second index.</param>
-        private static void Swap (ref int index1, ref int index2)
+        private static void Swap (ref int ? index1, ref int ? index2)
         {
-            int temp = index1;
+            int ?  temp = index1;
             index1 = index2;
             index2 = temp;
         }
