@@ -70,7 +70,7 @@ namespace Polynomial.Tests
 
             for (int i = 0; i < expected.Length; i++)
             {
-                Assert.AreEqual(expected[i], polynomial3.PolynomialValue[i], 1e-6);
+                Assert.AreEqual(expected[i], polynomial3.PolynomialValue[i]);
             }
         }
 
@@ -85,7 +85,7 @@ namespace Polynomial.Tests
 
             for (int i=0; i < expected.Length; i++)
             {
-                Assert.AreEqual(expected[i], polynomial3.PolynomialValue[i], 1e-6);
+                Assert.AreEqual(expected[i], polynomial3.PolynomialValue[i]);
             }
         }
     }

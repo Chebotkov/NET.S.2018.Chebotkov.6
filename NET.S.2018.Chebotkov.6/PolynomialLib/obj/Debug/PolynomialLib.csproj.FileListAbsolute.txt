@@ -4,3 +4,5 @@ D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\PolynomialLib\obj\Debug
 D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\PolynomialLib\obj\Debug\PolynomialLib.csproj.CoreCompileInputs.cache
 D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\PolynomialLib\obj\Debug\PolynomialLib.dll
 D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\PolynomialLib\obj\Debug\PolynomialLib.pdb
+D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\PolynomialLib\bin\Debug\app.config
+D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\PolynomialLib\bin\Debug\PolynomialLib.dll.config
