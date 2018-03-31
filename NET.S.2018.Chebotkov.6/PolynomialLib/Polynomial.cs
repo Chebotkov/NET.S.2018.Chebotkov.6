@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace PolynomialLib
 {
@@ -23,17 +24,23 @@ namespace PolynomialLib
         }
 
         /// <summary>
-        /// Initializes an epsilon variable.
+        /// Initializes static members of the <see cref="Polynomial"/> class.
         /// </summary>
         static Polynomial()
         {
-            if (!double.TryParse(System.Configuration.ConfigurationManager.AppSettings["epsilon"], out epsilon))
+            try
+            {
+                if (!double.TryParse(System.Configuration.ConfigurationManager.AppSettings["epsilon"], out epsilon))
+                {
+                    epsilon = 1e-6;
+                }               
+            }
+            catch(IOException)
             {
                 epsilon = 1e-6;
-                exponent = GetExponent(epsilon);
             }
-            else
-            {
+            finally
+            { 
                 exponent = GetExponent(epsilon);
             }
         }
@@ -62,7 +69,6 @@ namespace PolynomialLib
         public static bool operator ==(Polynomial first, Polynomial second)
         {
             if (ReferenceEquals(null, first)) return false;
-            if (ReferenceEquals(null, second)) return false;
             if (ReferenceEquals(first, second)) return true;
 
 
@@ -133,8 +139,14 @@ namespace PolynomialLib
         /// <param name="first">First polynomial.</param>
         /// <param name="second">Second polynomial.</param>
         /// <returns>Returns result of multiplication of polynomials.</returns>
+        /// <exception cref="ArgumentNullException">Throws when one ore both arguments is null.</exception>
         public static Polynomial operator *(Polynomial first, Polynomial second)
         {
+            if (ReferenceEquals(null, first) || ReferenceEquals(null, second))
+            {
+                throw new ArgumentNullException("Polynomial can't be null");
+            }
+
             double[] result = new double[first.PolynomialValue.Length + second.PolynomialValue.Length - 1];
             for (int i = 0; i < first.PolynomialValue.Length; i++)
             {
@@ -213,8 +225,14 @@ namespace PolynomialLib
         /// <param name="second">Second polynomial.</param>
         /// <param name="sign">Sign (+1\-1).</param>
         /// <returns>Returns new polynomial after addition.</returns>
+        /// <exception cref="ArgumentNullException">Throws when one ore both arguments is null.</exception>
         private static Polynomial Operation(Polynomial first, Polynomial second, int sign)
         {
+            if (ReferenceEquals(null, first) || ReferenceEquals(null, second))
+            {
+                throw new ArgumentNullException("Polynomial can't be null");
+            }
+
             double[] result = new double[first.PolynomialValue.Length < second.PolynomialValue.Length ? second.PolynomialValue.Length : first.PolynomialValue.Length];
             for (int i = 0; i < result.Length; i++)
             {

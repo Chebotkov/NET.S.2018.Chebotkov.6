@@ -22,4 +22,4 @@ D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\Polynomial.Tests\obj\De
 D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\Polynomial.Tests\obj\Debug\Polynomial.Tests.dll
 D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\Polynomial.Tests\obj\Debug\Polynomial.Tests.pdb
 D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\Polynomial.Tests\bin\Debug\app.config
-D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\Polynomial.Tests\bin\Debug\PolynomialLib.dll.config
+D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\Polynomial.Tests\bin\Debug\Polynomial.Tests.dll.config

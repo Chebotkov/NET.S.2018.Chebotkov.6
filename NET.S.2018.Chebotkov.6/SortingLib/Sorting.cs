@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections;
 
 namespace SortingLib
 {
@@ -16,62 +13,47 @@ namespace SortingLib
         /// This method sorts array with "Bubble Sorting".
         /// </summary>
         /// <param name="array">Array.</param>
-        public static void BubbleSorting(int ? [] array, int[][] jaggedArray)
+        public static void BubbleSorting(int[][] jaggedArray, IComparer comparer)
         {
+            if (jaggedArray == null)
+            {
+                throw new ArgumentNullException(nameof(jaggedArray));
+            }
+            if (comparer == null)
+            {
+                throw new ArgumentNullException(nameof(comparer));
+            }
+
             bool isSorted = false;
+            int endOfSortedPart = 0;
             while (!isSorted)
             {
-                isSorted = true; 
-                for (int i = array.Length-1; i >0; i--)
+                isSorted = true;
+                for (int i = jaggedArray.Length - 1; i > endOfSortedPart; i--)
                 {
-                    if (!array[i - 1].HasValue)
+
+                    if (comparer.Compare(jaggedArray[i], jaggedArray[i - 1]) < 0)
                     {
-                        if (!array[i].HasValue)
-                        {                        
-                            continue;
-                        }
-                        else
-                        {
-                            Swap(ref array[i], ref array[i - 1]);
-                            Swap(ref jaggedArray[i], ref jaggedArray[i - 1]);
-                            isSorted = false;
-                        }
-                    }
-                    
-                    if (array[i] < array[i-1])
-                    {
-                        Swap(ref array[i], ref array[i - 1]);
                         Swap(ref jaggedArray[i], ref jaggedArray[i - 1]);
                         isSorted = false;
                     }
                 }
+                endOfSortedPart++;
             }
         }
         #endregion
 
         #region Swap
         /// <summary>
-        /// Swap two indices in array.
+        /// Swaps two indices in array.
         /// </summary>
         /// <param name="index1">First index.</param>
         /// <param name="index2">Second index.</param>
-        private static void Swap (ref int ? index1, ref int ? index2)
+        private static void Swap(ref int[] index1, ref int[] index2)
         {
-            int ?  temp = index1;
+            int[] temp = index1;
             index1 = index2;
             index2 = temp;
-        }
-
-        /// <summary>
-        /// Swap two arrays in jagged array.
-        /// </summary>
-        /// <param name="arr1">First array.</param>
-        /// <param name="arr2">Second array.</para
-        private static void Swap(ref int [] arr1, ref int [] arr2)
-        {
-            int [] temp = arr1;
-            arr1 = arr2;
-            arr2 = temp;
         }
         #endregion
     }

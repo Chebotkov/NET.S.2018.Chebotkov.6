@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using SortingLib;
+using System.Collections;
 
 namespace Sort.Tests
 {
@@ -11,8 +12,8 @@ namespace Sort.Tests
         {
             int[][] a = new int[][] { new int[] { 8, 3, 3, 7, 8, 4, 3 }, new int[] { 3, 7, 9, 1, 3 }, new int[] { 2, 6, 3, 7 } };
             int[][] b = new int[][] { new int[] { 2, 6, 3, 7 }, new int[] { 8, 3, 3, 7, 8, 4, 3 }, new int[] { 3, 7, 9, 1, 3 } };
-            JaggedArraySortingMethods.ChosenAlgorithm = new GetMaxNumber();
-            JaggedArraySortingMethods.Sort(a);
+            IComparer compare = new CompareBy(new GetMaxNumber());
+            Sorting.BubbleSorting(a, compare);
 
             CollectionAssert.AreEqual(a, b);
         }
@@ -22,8 +23,9 @@ namespace Sort.Tests
         {
             int[][] a = new int[][] { new int[] { 8, 3, 3, 7, 8, 4, 3 }, new int[] { 3, 7, 9, 1, 3 }, new int[] { 2, 6, 3, 7 } };
             int[][] b = new int[][] { new int[] { 3, 7, 9, 1, 3 } , new int[] { 2, 6, 3, 7 }, new int[] { 8, 3, 3, 7, 8, 4, 3 }};
-            JaggedArraySortingMethods.ChosenAlgorithm = new GetMinNumber();
-            JaggedArraySortingMethods.Sort(a);
+
+            IComparer compare = new CompareBy(new GetMinNumber());
+            Sorting.BubbleSorting(a, compare);
 
             CollectionAssert.AreEqual(a, b);
         }
@@ -33,8 +35,9 @@ namespace Sort.Tests
         {
             int[][] a = new int[][] { new int[] { 8, 3, 3, 7, 8, 4, 3 }, new int[] { 3, 7, 9, 1, 3 }, new int[] { 2, 6, 3, 7 } };
             int[][] b = new int[][] { new int[] { 2, 6, 3, 7 }, new int[] { 3, 7, 9, 1, 3 }, new int[] { 8, 3, 3, 7, 8, 4, 3 } };
-            JaggedArraySortingMethods.ChosenAlgorithm = new GetSumOfNumbers();
-            JaggedArraySortingMethods.Sort(a);
+
+            IComparer compare = new CompareBy(new GetSumOfNumbers());
+            Sorting.BubbleSorting(a, compare);
 
             CollectionAssert.AreEqual(a, b);
         }
@@ -44,8 +47,9 @@ namespace Sort.Tests
         {
             int[][] a = new int[][] { new int[] { 8, 3, 3, 7, 8, 4, 3 }, new int[] { 3, 7, 9, 1, 3 }, null, new int[] { 2, 6, 3, 7 } };
             int[][] b = new int[][] { new int[] { 2, 6, 3, 7 }, new int[] { 3, 7, 9, 1, 3 }, new int[] { 8, 3, 3, 7, 8, 4, 3 }, null };
-            JaggedArraySortingMethods.ChosenAlgorithm = new GetSumOfNumbers();
-            JaggedArraySortingMethods.Sort(a);
+
+            IComparer compare = new CompareBy(new GetSumOfNumbers());
+            Sorting.BubbleSorting(a, compare);
 
             CollectionAssert.AreEqual(a, b);
         }
@@ -55,8 +59,9 @@ namespace Sort.Tests
         {
             int[][] a = new int[][] { new int[] { 8, 3, 3, 7, 8, 4, 3 }, new int[] { 3, 7, 9, 1, 3 }, null, null, null, new int[] { 2, 6, 3, 7 }, null };
             int[][] b = new int[][] { new int[] { 2, 6, 3, 7 }, new int[] { 3, 7, 9, 1, 3 }, new int[] { 8, 3, 3, 7, 8, 4, 3 }, null, null, null, null };
-            JaggedArraySortingMethods.ChosenAlgorithm = new GetSumOfNumbers();
-            JaggedArraySortingMethods.Sort(a);
+            
+            IComparer compare = new CompareBy(new GetSumOfNumbers());
+            Sorting.BubbleSorting(a, compare);
 
             CollectionAssert.AreEqual(a, b);
         }
@@ -66,8 +71,9 @@ namespace Sort.Tests
         {
             int[][] a = new int[][] { null, null, null, new int[] { 8, 3, 3, 7, 8, 4, 3 }, new int[] { 3, 7, 9, 1, 3 }, null, new int[] { 2, 6, 3, 7 } };
             int[][] b = new int[][] { new int[] { 2, 6, 3, 7 }, new int[] { 3, 7, 9, 1, 3 }, new int[] { 8, 3, 3, 7, 8, 4, 3 }, null, null, null, null };
-            JaggedArraySortingMethods.ChosenAlgorithm = new GetSumOfNumbers();
-            JaggedArraySortingMethods.Sort(a);
+
+            IComparer compare = new CompareBy(new GetSumOfNumbers());
+            Sorting.BubbleSorting(a, compare);
 
             CollectionAssert.AreEqual(a, b);
         }

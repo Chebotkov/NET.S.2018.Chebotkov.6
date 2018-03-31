@@ -8,7 +8,7 @@
         /// <summary>
         /// This method returns max value in array.
         /// </summary>
-        /// <param name="array">Array.</param>
+        /// <param name="array">Array.</param>0
         /// <returns>Integer number.</returns>
         public int ? Algorithm(int[] array)
         {
