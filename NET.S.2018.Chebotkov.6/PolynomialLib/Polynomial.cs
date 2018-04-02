@@ -30,10 +30,7 @@ namespace PolynomialLib
         {
             try
             {
-                if (!double.TryParse(System.Configuration.ConfigurationManager.AppSettings["epsilon"], out epsilon))
-                {
-                    epsilon = 1e-6;
-                }               
+                double.Parse(System.Configuration.ConfigurationManager.AppSettings["epsilon"]);         
             }
             catch(IOException)
             {

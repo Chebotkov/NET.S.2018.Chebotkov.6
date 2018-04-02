@@ -21,3 +21,7 @@ D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\Sort.Tests\obj\Debug\So
 D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\Sort.Tests\obj\Debug\Sort.Tests.csproj.CoreCompileInputs.cache
 D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\Sort.Tests\obj\Debug\Sort.Tests.dll
 D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\Sort.Tests\obj\Debug\Sort.Tests.pdb
+D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\Sort.Tests\bin\Debug\GetMaxNumber.cs
+D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\Sort.Tests\bin\Debug\GetMinNumber.cs
+D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\Sort.Tests\bin\Debug\GetSumOfNumbers.cs
+D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\Sort.Tests\bin\Debug\IAlgorithm.cs

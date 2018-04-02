@@ -12,7 +12,7 @@ namespace Sort.Tests
         {
             int[][] a = new int[][] { new int[] { 8, 3, 3, 7, 8, 4, 3 }, new int[] { 3, 7, 9, 1, 3 }, new int[] { 2, 6, 3, 7 } };
             int[][] b = new int[][] { new int[] { 2, 6, 3, 7 }, new int[] { 8, 3, 3, 7, 8, 4, 3 }, new int[] { 3, 7, 9, 1, 3 } };
-            IComparer compare = new CompareBy(new GetMaxNumber());
+            IComparer compare = new Comparerr(new GetMaxNumber());
             Sorting.BubbleSorting(a, compare);
 
             CollectionAssert.AreEqual(a, b);
@@ -24,7 +24,7 @@ namespace Sort.Tests
             int[][] a = new int[][] { new int[] { 8, 3, 3, 7, 8, 4, 3 }, new int[] { 3, 7, 9, 1, 3 }, new int[] { 2, 6, 3, 7 } };
             int[][] b = new int[][] { new int[] { 3, 7, 9, 1, 3 } , new int[] { 2, 6, 3, 7 }, new int[] { 8, 3, 3, 7, 8, 4, 3 }};
 
-            IComparer compare = new CompareBy(new GetMinNumber());
+            IComparer compare = new Comparerr(new GetMinNumber());
             Sorting.BubbleSorting(a, compare);
 
             CollectionAssert.AreEqual(a, b);
@@ -36,7 +36,7 @@ namespace Sort.Tests
             int[][] a = new int[][] { new int[] { 8, 3, 3, 7, 8, 4, 3 }, new int[] { 3, 7, 9, 1, 3 }, new int[] { 2, 6, 3, 7 } };
             int[][] b = new int[][] { new int[] { 2, 6, 3, 7 }, new int[] { 3, 7, 9, 1, 3 }, new int[] { 8, 3, 3, 7, 8, 4, 3 } };
 
-            IComparer compare = new CompareBy(new GetSumOfNumbers());
+            IComparer compare = new Comparerr(new GetSumOfNumbers());
             Sorting.BubbleSorting(a, compare);
 
             CollectionAssert.AreEqual(a, b);
@@ -48,7 +48,7 @@ namespace Sort.Tests
             int[][] a = new int[][] { new int[] { 8, 3, 3, 7, 8, 4, 3 }, new int[] { 3, 7, 9, 1, 3 }, null, new int[] { 2, 6, 3, 7 } };
             int[][] b = new int[][] { new int[] { 2, 6, 3, 7 }, new int[] { 3, 7, 9, 1, 3 }, new int[] { 8, 3, 3, 7, 8, 4, 3 }, null };
 
-            IComparer compare = new CompareBy(new GetSumOfNumbers());
+            IComparer compare = new Comparerr(new GetSumOfNumbers());
             Sorting.BubbleSorting(a, compare);
 
             CollectionAssert.AreEqual(a, b);
@@ -60,7 +60,7 @@ namespace Sort.Tests
             int[][] a = new int[][] { new int[] { 8, 3, 3, 7, 8, 4, 3 }, new int[] { 3, 7, 9, 1, 3 }, null, null, null, new int[] { 2, 6, 3, 7 }, null };
             int[][] b = new int[][] { new int[] { 2, 6, 3, 7 }, new int[] { 3, 7, 9, 1, 3 }, new int[] { 8, 3, 3, 7, 8, 4, 3 }, null, null, null, null };
             
-            IComparer compare = new CompareBy(new GetSumOfNumbers());
+            IComparer compare = new Comparerr(new GetSumOfNumbers());
             Sorting.BubbleSorting(a, compare);
 
             CollectionAssert.AreEqual(a, b);
@@ -72,7 +72,7 @@ namespace Sort.Tests
             int[][] a = new int[][] { null, null, null, new int[] { 8, 3, 3, 7, 8, 4, 3 }, new int[] { 3, 7, 9, 1, 3 }, null, new int[] { 2, 6, 3, 7 } };
             int[][] b = new int[][] { new int[] { 2, 6, 3, 7 }, new int[] { 3, 7, 9, 1, 3 }, new int[] { 8, 3, 3, 7, 8, 4, 3 }, null, null, null, null };
 
-            IComparer compare = new CompareBy(new GetSumOfNumbers());
+            IComparer compare = new Comparerr(new GetSumOfNumbers());
             Sorting.BubbleSorting(a, compare);
 
             CollectionAssert.AreEqual(a, b);

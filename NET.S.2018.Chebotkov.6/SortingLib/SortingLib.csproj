@@ -40,11 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompareBy.cs" />
-    <Compile Include="GetMaxNumber.cs" />
-    <Compile Include="GetMinNumber.cs" />
-    <Compile Include="GetSumOfNumbers.cs" />
-    <Compile Include="IAlgorithm.cs" />
+    <Compile Include="Compare.cs" />
     <Compile Include="Sorting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

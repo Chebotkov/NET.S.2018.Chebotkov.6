@@ -5,14 +5,14 @@ namespace SortingLib
     /// <summary>
     /// Implements Icomparer. 
     /// </summary>
-    public class CompareBy : IComparer
+    public class Comparerr : IComparer
     {
         /// <summary>
         /// Gets / sets certain algorithm.
         /// </summary>
         public static IAlgorithm ChosenAlgorithm { get; set; } = new GetSumOfNumbers();
 
-        public CompareBy(IAlgorithm algorithm)
+        public Comparerr(IAlgorithm algorithm)
         {
             ChosenAlgorithm = algorithm;
         }
@@ -55,4 +55,3 @@ namespace SortingLib
         }
     }
 }
-
