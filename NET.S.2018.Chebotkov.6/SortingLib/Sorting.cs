@@ -12,7 +12,8 @@ namespace SortingLib
         /// <summary>
         /// This method sorts array with "Bubble Sorting".
         /// </summary>
-        /// <param name="array">Array.</param>
+        /// <param name="jaggedArray">"Jagged array".</param>
+        /// <param name="comparer">Icomparer instance.</param>
         public static void BubbleSorting(int[][] jaggedArray, IComparer comparer)
         {
             if (jaggedArray == null)
@@ -33,6 +34,40 @@ namespace SortingLib
                 {
 
                     if (comparer.Compare(jaggedArray[i], jaggedArray[i - 1]) < 0)
+                    {
+                        Swap(ref jaggedArray[i], ref jaggedArray[i - 1]);
+                        isSorted = false;
+                    }
+                }
+                endOfSortedPart++;
+            }
+        }
+
+        /// <summary>
+        /// This method sorts array with "Bubble Sorting".
+        /// </summary>
+        /// <param name="jaggedArray">"Jagged array".</param>
+        /// <param name="comparator">Comparative method.</param>
+        public static void BubbleSorting(int[][] jaggedArray, Func<int[], int[], int> comparator)
+        {
+            if (jaggedArray == null)
+            {
+                throw new ArgumentNullException(nameof(jaggedArray));
+            }
+            if (comparator == null)
+            {
+                throw new ArgumentNullException(nameof(comparator));
+            }
+
+            bool isSorted = false;
+            int endOfSortedPart = 0;
+            while (!isSorted)
+            {
+                isSorted = true;
+                for (int i = jaggedArray.Length - 1; i > endOfSortedPart; i--)
+                {
+
+                    if (comparator(jaggedArray[i], jaggedArray[i - 1]) < 0)
                     {
                         Swap(ref jaggedArray[i], ref jaggedArray[i - 1]);
                         isSorted = false;

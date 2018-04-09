@@ -41,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Compare.cs" />
+    <Compile Include="CompareWithDelegate.cs" />
+    <Compile Include="CompareWithInterface.cs" />
+    <Compile Include="DelegateCompare.cs" />
     <Compile Include="Sorting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
