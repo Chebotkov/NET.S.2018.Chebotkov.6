@@ -1,6 +1,0 @@
-D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\SortingLib\bin\Debug\SortingLib.dll
-D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\SortingLib\bin\Debug\SortingLib.pdb
-D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\SortingLib\obj\Debug\SortingLib.csproj.CoreCompileInputs.cache
-D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\SortingLib\obj\Debug\SortingLib.dll
-D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\SortingLib\obj\Debug\SortingLib.pdb
-D:\Courses\NET.S.2018.Chebotkov.6\NET.S.2018.Chebotkov.6\SortingLib\obj\Debug\SortingLib.csprojResolveAssemblyReference.cache
